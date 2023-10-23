@@ -1,0 +1,375 @@
+:: StoryTitle
+Query Quest
+
+
+:: StoryData
+{
+  "ifid": "67cc226a-e233-4dd1-aed5-c3fbec2d7fc5",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: Correct Answer - Puzzle 1 {"position":"275,25","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=16B1BTsRZ-7EMqjUdXMGSCzEWhD4QBhte" alt="Old Room">
+<table border="1">
+    <tr>
+        <th>Table Name</th>
+    </tr>
+    <tr>
+        <td>AncientScrolls</td>
+    </tr>
+    <tr>
+        <td>MysticalScrolls</td>
+    </tr>
+    <tr>
+        <td>EnchantedManuscripts</td>
+    </tr>
+    <tr>
+        <td>ForbiddenTomes</td>
+    </tr>
+</table>
+As you utter the command, a gentle rumble shakes the room. The stone walls part, revealing hidden pathways leading deeper into the library. A sense of accomplishment courses through you. The first step of the journey is complete, but many challenges still await in the shadowed corridors of the underground library. The air, dense with the silence of a thousand untold stories, urges you forward.
+
+Your current score is $score points.
+
+[[Proceed to Room 2->Room 2]]
+
+
+:: Correct Answer - Puzzle 2 {"position":"650,25","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=1kpWEYmzkcqJR2CuKoe_CkCy0CsjsvxlB" alt="Old Room">
+
+The room trembles with acknowledgment, the inscriptions on the wall glowing with ethereal light. The command you spoke echoes with the wisdom of ages, and a concealed door creaks open, beckoning you into deeper mysteries. The narrative of the underground library unfolds, each room a chapter, each challenge a verse.
+
+Your current score is $score points.
+
+[[Proceed to Room 3->Room 3]]
+
+
+:: Correct Answer - Puzzle 3 {"position":"1025,25","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=10pg-kec4mGmB-pdO3Ht5v86b30E64vYP" alt="Old Room" width="50%">
+
+The command resonates in the air, and the runes on the scroll gleam with ethereal illumination, unveiling a hidden passage. The arcane knowledge of the 'AncientScrolls' is now a part of your narrative, a silent testament to your growing mastery over the SQL enigmas. The next chapter of the underground library awaits.
+
+Your current score is $score points.
+
+[[Proceed to Room 4->Room 4]]
+
+
+:: Defeat {"position":"275,150","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=16sJNGmplegYi5o26_pwhsV500GfnX-Pz" alt="Old Room">
+
+Unfortunately, the final command was incorrect, and the secrets remain locked away. Your final score is $score points. Would you like to 
+[[Go back->Room 3]]
+
+
+:: Room 1 {"position":"150,25","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=1e_b34zJxLa4h2ria8T8Pcz447-7GphcK" alt="Old Room">
+The air is thick with mystery as you step into the Entrance Hall. The echo of your footsteps reverberates through the vast, silent space, dust particles dancing in the air, illuminated by the faint moonlight seeping through the cracks in the stone ceiling. Before you lies a challenge inscribed on a stone tablet, the key to unveiling the secrets buried within this enigmatic library. The inscription asks for the ancient command that reveals hidden tables. The weight of centuries of knowledge bears down upon you, urging you to uncover the concealed mysteries.
+(link: "ENTER SQL COMMAND")[
+  (set: $command to (prompt: "Enter the SQL command:", ""))
+  (set: $attempts to $attempts + 1)
+  (if: $command is "SHOW TABLES;")[
+    (if: $attempts is 1)[(set: $score to 50)]
+    (if: $attempts is 2)[(set: $score to 40)]
+    (if: $attempts is 3)[(set: $score to 30)]
+    (if: $attempts > 3)[(set: $score to 10)]
+    (go-to: "Correct Answer - Puzzle 1")
+  ]
+  (else:)[
+    (go-to: "Wrong Answer - Puzzle 1")
+  ]
+]
+
+
+:: Room 2 {"position":"525,25","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=14ZQw8yJtipNpE_TUZdFJRRFi_Q7BqNaf" alt="Old Room" width="50%">
+You step into a room adorned with intricate inscriptions, depicting the structure of a legendary table named 'AncientScrolls'. Shelves lined with ancient texts stretch out into the darkness, their contents a mystery. To unlock the next chamber, you must invoke the SQL command that unveils the structure of this enigmatic table. The silent whisper of ages past hangs in the air, urging you to uncover the next piece of the puzzle.
+
+You yearn to learn more about the fields (columns) in the table.
+
+Your current score is $score points.
+(link: "ENTER SQL COMMAND")[
+  (set: $command to (prompt: "Enter the SQL command:", ""))
+  (if: $command is "DESCRIBE AncientScrolls;")[
+    (set: $score to $score + 50)
+    (go-to: "Correct Answer - Puzzle 2")
+  ]
+  (else:)[
+    (go-to: "Wrong Answer - Puzzle 2")
+  ]
+]
+
+
+:: Room 3 {"position":"900,25","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=1aVEsdwdwptMKs0Mr4pgQsoEnm9SLGUpQ" alt="Old Room">
+
+In this mystic chamber, an ancient scroll lies open, cryptic runes inscribed upon its surface, revealing records of mystical artifacts. The echo of arcane wisdom fills the air. To proceed further into the enigmatic depths of the library, you are tasked with retrieving all records from the 'AncientScrolls' table. The silent watch of the ancient texts urges you to speak the command.
+
+Your current score is $score points.
+(link: "ENTER SQL COMMAND")[
+  (set: $command to (prompt: "Enter the SQL command:", ""))
+  (if: $command is "SELECT * FROM AncientScrolls;")[
+    (set: $score to $score + 50)
+    (go-to: "Correct Answer - Puzzle 3")
+  ]
+  (else:)[
+    (go-to: "Wrong Answer - Puzzle 3")
+  ]
+]
+
+
+:: Room 4 {"position":"25,150","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=193w27Ce_9I2p5NgFR4zNvbbGEG7E2tgp" alt="Old Room">
+
+The final chamber is adorned with inscriptions of legendary artifacts, their powers and curses echoing through ages. The 'Crystal Orb', a mystical artifact of untold power, lies at the core of the final challenge. You must retrieve the records from the 'AncientScrolls' table where the 'Artifact' column reveals the secrets of the 'Crystal Orb'. In the silence of the chamber, the final incantation awaits utterance.
+
+Your current score is $score points.
+(link: "ENTER SQL COMMAND")[
+  (set: $command to (prompt: "Enter the SQL command:", ""))
+  (if: ($command is "SELECT * FROM AncientScrolls WHERE Artifact='Crystal Orb';") or ($command is 'SELECT * FROM AncientScrolls WHERE Artifact="Crystal Orb";'))[
+    (set: $score to $score + 50)
+    (go-to: "Victory")
+  ]
+  (else:)[
+    (go-to: "Defeat")
+  ]
+]
+
+
+:: Start {"position":"25,25","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=1ZtKvVG2V71HNeQ4LwwqMauE1iduiXFon" alt="Library" >
+You find yourself in a mysterious underground library. Your objective is to navigate through various rooms, uncovering secrets and facing SQL challenges to find the way out. Are you ready to begin your Query Quest?
+(link: "Begin the quest")[(set: $score to 0)(set: $attempts to 0)(go-to: "Room 1")]
+
+Your score is currently: $score points.
+
+
+:: Victory {"position":"150,150","size":"100,100"}
+<img class="full-width" src="https://drive.google.com/uc?export=view&id=18MCB5YYl7DLlKtz5EwAJq5-ui1SW8rHZ" alt="Old Room">
+
+Congratulations! You've mastered the SQL challenges and unlocked the secrets of the underground library! Your final score is $score points.
+
+
+:: Wrong Answer - Puzzle 1 {"position":"400,25","size":"100,100"}
+A shudder of silence follows your attempt. The stone walls, keepers of ancient secrets, remain unmoved. It seems the command isn’t the key to unlocking the next chapter of this enigmatic journey. The spectral glow of moonlight casts eerie shadows, urging you to try again.
+
+Your current score is $score points.
+
+[[Go back->Room 1]]
+
+
+:: Wrong Answer - Puzzle 2 {"position":"775,25","size":"100,100"}
+An unsettling silence follows. The inscriptions remain dormant, the secrets of 'AncientScrolls' untouched. The command wasn’t the incantation needed to unveil the hidden lore. Amidst the silent tomes and inscribed walls, you feel the urge to venture deeper into the mystery.
+
+Your current score is $score points.
+
+[[Go back->Room 2]]
+
+
+:: Wrong Answer - Puzzle 3 {"position":"1150,25","size":"100,100"}
+The cryptic runes on the ancient scroll remain enigmatic, unyielding to the command you spoke. In the silent watch of the mystic chamber, another attempt to unravel the enigma beckons. The journey into the depths of SQL knowledge is marked by trials and revelations.
+
+Your current score is $score points.
+
+[[Go back->Room 3]]
+
+
+:: StoryStylesheet [stylesheet]
+/* 
+	Twine CSS Template
+	
+	Simple CSS Template to help Twine authors change 
+		the default appearance
+		
+	Most current version, and license information at:
+	https://github.com/danieltalsky/twine-css-template
+	
+	Special thanks to furkle's Twine 2 Harlowe CSS Tutorial
+	no longer up on the web but helped a lot with the basics.
+	
+	- Version:  1.0
+	- Author:   Daniel Talsky <daniel@danieltalsky.com>
+
+	
+	COLORS
+
+	The default colors I picked are based on the Solarized Dark theme, 
+	optimized for readability and most often used in computer programming.
+	Change them to make your game have whatever mood you want, just make
+	sure it's readable!
+
+	- background  				#002b36
+	- sidebar background   		#073642
+	
+	- main text color 			#839496
+	- main sidebar text color   #93a1a1
+
+	FONTS
+	
+	You can use a traditional HTML font stack, but having access to
+	unique fonts keeps your game looking unique.  I picked 
+	PT Sans Caption, but you can pick any combination of google fonts
+	and they will generate this import line for you.
+	
+	Google Fonts:
+	https://fonts.google.com/
+*/
+
+
+/* These are the default options for the entire browser window */
+tw-story {	
+	background-color: #010101; 
+	/* Color is the foreground / font color */
+	color: #FFFFFF;
+	/* Make sure the first font listed is one of the fonts you imported above */
+	font-family: sans-serif;
+	/* This makes the font size for normal letters just a little bit bigger than default */
+	font-size: 1.25em;
+}
+
+/* These are the default options for the each passage area */
+tw-passage {
+	/* 
+		This lets the story take up most of its width up to a maximum readable width 
+		an `em` is about the width of one of your letters.  max-width lets the size
+		get wider and wider with the size of the window but only to a sane point
+		
+		It's ok to experiment with making this smaller or larger
+	*/
+    max-width: 55em;
+	/* This centers the main story column in the window */
+    margin: 0 auto 0 auto;
+}
+
+/* The sidebar with scoring and the back button */
+tw-sidebar { 
+	background: #073642;
+	color: #93a1a1;
+	/* 
+		Gives the sidebar rounded corners.  Remove for no corners or make the number
+		higher for more rounded colors.
+		
+	*/
+	border-radius: 10px;
+
+	/* Uncomment to hide the sidebar completely */
+	display: none;
+}
+
+/*
+  BASIC LINK STYLES
+  
+  This covers various different kinds of links in Harlowe
+*/
+.enchantment-link, tw-link, a {
+	color: #cb4b16; 
+	font-weight: bold; 
+	/* Adds a glow to links.  You can make it a seperate color from the text 
+	   The numbers mean, in order: 
+	   - How far to the right of the letter (0 means radiating from the letter)
+	   - How far below the letter
+	   - How much blur does the glow/shadow have
+	   - What color is the shadow
+	*/
+	text-shadow: 0 0 5px #cb4b16;
+}
+/* Links that have already been visited */
+.enchantment-link:visited, tw-link:visited, .enchantment-link.visited, tw-link.visited, a:visited {
+	color: #268bd2; 
+	font-weight: bold; 
+	text-shadow: 0 0 5px #268bd2;
+}
+/* Links when the mouse is over them */
+.enchantment-link:hover, tw-link:hover, a:hover {
+	color: #2aa198; 
+	font-weight: bold; 
+	text-shadow: 0 0 5px #2aa198;
+}
+
+
+/*
+	EFFECTS
+
+	The pulse-in effect is good for text that will appear based on a user
+	action.  In Twine2, text will just blink into being and the user might
+	not notice.  If you wrap your text in:
+	<span class="pulse-in">Text that gets shown.</span>
+	
+	It will appear with a bright colored pulse that makes it clear it just
+	appeared.
+*/
+@keyframes pulsein {
+  from { color: #00fbf7; text-shadow: 0 0 1em #00fbf7; }
+  to { color: #ADC3D8; text-shadow: 0 0; }
+}
+.pulse-in {
+    color: #ADC3D8;
+    font-size: 1.1em;
+    animation: pulsein 1.2s linear 3;
+}
+span.pulse-in {
+  font-size: inherit;
+}
+
+/* IMAGE STYLES */
+
+/* styles for all images by default */
+img {
+	/* for example */
+	border: 1px solid black;
+}
+/* 
+   images with <img class="full-width"> will stretch 
+   to the full width of the story 
+*/
+img.full-width {
+	display:block; margin-right:auto; margin-left:auto; 
+	width: 100%;
+}
+
+
+
+
+
+/*
+	TABLET-SPECIFIC RULES / SMALL WIDTH BROWSERS
+*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+  tw-story {
+	  font-size: 3em;
+	  width: 100%;
+	  max-width: 95%;
+	  margin: 0 auto 0 auto;
+	  padding: 20% 10%;
+  }
+
+  tw-passage {
+	  width: 100%;
+  }  
+
+}	
+
+/*
+	MOBILE-SPECIFIC RULES
+	
+	You often want to make fonts much larger.
+*/
+@media only screen and (max-device-width: 480px) {
+
+  tw-story {
+	  font-size: 3.2em;
+	  width: 100%;
+	  max-width: 95%;
+	  margin: 0 auto 0 auto;
+	  padding: 20% 5%;
+  }
+
+  tw-passage {
+	  width: 100%;
+  }  
+  
+}
