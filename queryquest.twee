@@ -12,8 +12,15 @@ Query Quest
 }
 
 
-:: Correct Answer - Puzzle 1 {"position":"275,25","size":"100,100"}
+:: Correct Answer - Puzzle 1 {"position":"475,525","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=16B1BTsRZ-7EMqjUdXMGSCzEWhD4QBhte" alt="Old Room">
+<audio id="myAudio" controls>
+   <source src="https://drive.google.com/uc?export=view&id=1fSZhX2JfDq7rreMBlvuvfV5Ol_zWXAZa" type="audio/mpeg">
+</audio>
+
+
+As you utter the command, a gentle rumble shakes the room. The stone walls part, revealing hidden pathways leading deeper into the library. A sense of accomplishment courses through you. 
+
 <table border="1">
     <tr>
         <th>Table Name</th>
@@ -31,14 +38,15 @@ Query Quest
         <td>ForbiddenTomes</td>
     </tr>
 </table>
-As you utter the command, a gentle rumble shakes the room. The stone walls part, revealing hidden pathways leading deeper into the library. A sense of accomplishment courses through you. The first step of the journey is complete, but many challenges still await in the shadowed corridors of the underground library. The air, dense with the silence of a thousand untold stories, urges you forward.
+
+The first step of the journey is complete, but many challenges still await in the shadowed corridors of the underground library. The air, dense with the silence of a thousand untold stories, urges you forward.
 
 Your current score is $score points.
 
 [[Proceed to Room 2->Room 2]]
 
 
-:: Correct Answer - Puzzle 2 {"position":"650,25","size":"100,100"}
+:: Correct Answer - Puzzle 2 {"position":"725,525","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=1kpWEYmzkcqJR2CuKoe_CkCy0CsjsvxlB" alt="Old Room">
 
 The room trembles with acknowledgment, the inscriptions on the wall glowing with ethereal light. The command you spoke echoes with the wisdom of ages, and a concealed door creaks open, beckoning you into deeper mysteries. The narrative of the underground library unfolds, each room a chapter, each challenge a verse.
@@ -48,7 +56,7 @@ Your current score is $score points.
 [[Proceed to Room 3->Room 3]]
 
 
-:: Correct Answer - Puzzle 3 {"position":"1025,25","size":"100,100"}
+:: Correct Answer - Puzzle 3 {"position":"1025,525","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=10pg-kec4mGmB-pdO3Ht5v86b30E64vYP" alt="Old Room" width="50%">
 
 The command resonates in the air, and the runes on the scroll gleam with ethereal illumination, unveiling a hidden passage. The arcane knowledge of the 'AncientScrolls' is now a part of your narrative, a silent testament to your growing mastery over the SQL enigmas. The next chapter of the underground library awaits.
@@ -58,16 +66,22 @@ Your current score is $score points.
 [[Proceed to Room 4->Room 4]]
 
 
-:: Defeat {"position":"275,150","size":"100,100"}
+:: Defeat {"position":"1125,275","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=16sJNGmplegYi5o26_pwhsV500GfnX-Pz" alt="Old Room">
 
 Unfortunately, the final command was incorrect, and the secrets remain locked away. Your final score is $score points. Would you like to 
-[[Go back->Room 3]]
+[[Go back->Room 4]]
 
 
-:: Room 1 {"position":"150,25","size":"100,100"}
+:: Room 1 {"position":"400,300","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=1e_b34zJxLa4h2ria8T8Pcz447-7GphcK" alt="Old Room">
+
+<audio id="myAudio" controls>
+   <source src="https://drive.google.com/uc?export=view&id=1aI2fnUi8ns-OPgQT4PqQsWwY6UXeQoSj" type="audio/mpeg">
+</audio>
+
 The air is thick with mystery as you step into the Entrance Hall. The echo of your footsteps reverberates through the vast, silent space, dust particles dancing in the air, illuminated by the faint moonlight seeping through the cracks in the stone ceiling. Before you lies a challenge inscribed on a stone tablet, the key to unveiling the secrets buried within this enigmatic library. The inscription asks for the ancient command that reveals hidden tables. The weight of centuries of knowledge bears down upon you, urging you to uncover the concealed mysteries.
+
 (link: "ENTER SQL COMMAND")[
   (set: $command to (prompt: "Enter the SQL command:", ""))
   (set: $attempts to $attempts + 1)
@@ -84,7 +98,7 @@ The air is thick with mystery as you step into the Entrance Hall. The echo of yo
 ]
 
 
-:: Room 2 {"position":"525,25","size":"100,100"}
+:: Room 2 {"position":"550,300","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=14ZQw8yJtipNpE_TUZdFJRRFi_Q7BqNaf" alt="Old Room" width="50%">
 You step into a room adorned with intricate inscriptions, depicting the structure of a legendary table named 'AncientScrolls'. Shelves lined with ancient texts stretch out into the darkness, their contents a mystery. To unlock the next chamber, you must invoke the SQL command that unveils the structure of this enigmatic table. The silent whisper of ages past hangs in the air, urging you to uncover the next piece of the puzzle.
 
@@ -103,7 +117,7 @@ Your current score is $score points.
 ]
 
 
-:: Room 3 {"position":"900,25","size":"100,100"}
+:: Room 3 {"position":"700,300","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=1aVEsdwdwptMKs0Mr4pgQsoEnm9SLGUpQ" alt="Old Room">
 
 In this mystic chamber, an ancient scroll lies open, cryptic runes inscribed upon its surface, revealing records of mystical artifacts. The echo of arcane wisdom fills the air. To proceed further into the enigmatic depths of the library, you are tasked with retrieving all records from the 'AncientScrolls' table. The silent watch of the ancient texts urges you to speak the command.
@@ -121,7 +135,7 @@ Your current score is $score points.
 ]
 
 
-:: Room 4 {"position":"25,150","size":"100,100"}
+:: Room 4 {"position":"925,325","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=193w27Ce_9I2p5NgFR4zNvbbGEG7E2tgp" alt="Old Room">
 
 The final chamber is adorned with inscriptions of legendary artifacts, their powers and curses echoing through ages. The 'Crystal Orb', a mystical artifact of untold power, lies at the core of the final challenge. You must retrieve the records from the 'AncientScrolls' table where the 'Artifact' column reveals the secrets of the 'Crystal Orb'. In the silence of the chamber, the final incantation awaits utterance.
@@ -139,7 +153,7 @@ Your current score is $score points.
 ]
 
 
-:: Start {"position":"25,25","size":"100,100"}
+:: Start {"position":"200,300","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=1ZtKvVG2V71HNeQ4LwwqMauE1iduiXFon" alt="Library" >
 You find yourself in a mysterious underground library. Your objective is to navigate through various rooms, uncovering secrets and facing SQL challenges to find the way out. Are you ready to begin your Query Quest?
 (link: "Begin the quest")[(set: $score to 0)(set: $attempts to 0)(go-to: "Room 1")]
@@ -147,13 +161,13 @@ You find yourself in a mysterious underground library. Your objective is to navi
 Your score is currently: $score points.
 
 
-:: Victory {"position":"150,150","size":"100,100"}
+:: Victory {"position":"1125,150","size":"100,100"}
 <img class="full-width" src="https://drive.google.com/uc?export=view&id=18MCB5YYl7DLlKtz5EwAJq5-ui1SW8rHZ" alt="Old Room">
 
 Congratulations! You've mastered the SQL challenges and unlocked the secrets of the underground library! Your final score is $score points.
 
 
-:: Wrong Answer - Puzzle 1 {"position":"400,25","size":"100,100"}
+:: Wrong Answer - Puzzle 1 {"position":"300,525","size":"100,100"}
 A shudder of silence follows your attempt. The stone walls, keepers of ancient secrets, remain unmoved. It seems the command isn’t the key to unlocking the next chapter of this enigmatic journey. The spectral glow of moonlight casts eerie shadows, urging you to try again.
 
 Your current score is $score points.
@@ -161,7 +175,7 @@ Your current score is $score points.
 [[Go back->Room 1]]
 
 
-:: Wrong Answer - Puzzle 2 {"position":"775,25","size":"100,100"}
+:: Wrong Answer - Puzzle 2 {"position":"600,525","size":"100,100"}
 An unsettling silence follows. The inscriptions remain dormant, the secrets of 'AncientScrolls' untouched. The command wasn’t the incantation needed to unveil the hidden lore. Amidst the silent tomes and inscribed walls, you feel the urge to venture deeper into the mystery.
 
 Your current score is $score points.
@@ -169,7 +183,7 @@ Your current score is $score points.
 [[Go back->Room 2]]
 
 
-:: Wrong Answer - Puzzle 3 {"position":"1150,25","size":"100,100"}
+:: Wrong Answer - Puzzle 3 {"position":"875,525","size":"100,100"}
 The cryptic runes on the ancient scroll remain enigmatic, unyielding to the command you spoke. In the silent watch of the mystic chamber, another attempt to unravel the enigma beckons. The journey into the depths of SQL knowledge is marked by trials and revelations.
 
 Your current score is $score points.
